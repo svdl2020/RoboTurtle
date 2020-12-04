@@ -1,0 +1,52 @@
+/* Stylesheet for RoboTurtle as part of final project for WebApps, Minor Programmeren by Sebastiaan van der Laan */
+/* Primary colors are the official Italian flag colors: Fern green: (0, 140, 69) , Bright White:(244, 245, 240), Flame Scarlet: (205, 33, 42) */
+/* I copied the initial layout of this stylesheet from the flaskr tutorial, but edited a lot. */
+@media only screen and (max-width: 1026px) {
+    .big-logo {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1026px) {
+    .small-logo {
+        display: none;
+    }
+}
+html { color: rgb(0, 140, 69); font-family: sans-serif; background: rgb(244, 245, 240); padding: 1rem; text-align: center; }
+body { font-family: serif; background: rgb(244, 245, 240); margin: 5px; padding: 5px; color: rgb(0, 140, 69);}
+a { color: rgb(0, 140, 69); }
+hr { border: none; border-top: 1px solid lightgray; }
+nav { font-family: serif; color: rgb(205, 33, 42); margin: 1rem 0; background: rgb(244, 245, 240); color: rgb(0, 140, 69); display: flex; align-items: center; padding: 0 0.5rem; }
+nav h1 { flex: auto; margin: 0; font-family: serif;}
+nav h1 a { text-decoration: none; padding: 0.25rem 0.5rem; font-family: serif; color: rgb(205, 33, 42);}
+nav ul  { display: flex; list-style: none; margin: 0; padding: 0; }
+nav ul li a, nav ul li span, header .action { display: block; padding: 0.5rem; }
+.content { padding: 0 1rem 1rem; }
+.content > header { border-bottom: 1px solid lightgray; display: flex; align-items: flex-end; text-align: center;}
+.content > header h1 { flex: auto; margin: 1rem 0 0.25rem 0; }
+h1 { font-family: serif; color: rgb(205, 33, 42); margin: 1rem 0;}
+h2 { font-family: serif; color: rgb(205, 33, 42); margin: 1rem 0; text-align: center; font-size: 5vw;}
+h3 {font-size: 4vw;}
+p {font-size: 3vw;}
+.flash { margin: 1em 0; padding: 1em; background: #cae6f6; border: 1px solid #377ba8; text-align: center;}
+.post > header { display: flex; align-items: flex-end; font-size: 0.85em; }
+.post > header > div:first-of-type { flex: auto; }
+.post > header h1 { font-size: 1.5em; margin-bottom: 0; text-align: center;}
+.post .about { color: slategray; font-style: italic; }
+.post .body { white-space: pre-line; }
+.content {color: rgb(0, 140, 69)}
+.content:last-child { margin-bottom: 0; }
+.content form { margin: 1em 0; display: flex; flex-direction: column; }
+.content label { font-weight: bold; margin-bottom: 0.5em; }
+.content input, .content textarea { margin-bottom: 1em; }
+.content textarea { min-height: 12em; resize: vertical; }
+input.danger { color: rgb(205, 33, 42); }
+input[type=submit] { align-self: start; min-width: 10em; }
+.wrapper {margin: auto; text-align: center;}
+.button, .select, .input { margin:auto; display:block; width: 350px; text-align: center; }
+.slider {margin:auto; display:block; width:80%; }
+.container {padding-top:50px; padding-bottom: 50px;}
+.legend {color:rgb(205, 33, 42);font-size: 3vw;}
+.roboturtle {font-size: 2vw;}
+.output{font-size: 2vw;}
+.metric-left {display: block; width: 30%; float: left; font-size: 2vw;}
+.metric-right {display: block; width: 30%; float: right;font-size: 2vw;}

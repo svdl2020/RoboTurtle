@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Welcome!
+{% endblock %}
+
+{% block header %}
+  🤖RoboTurtle🐢
+{% endblock %}
+
+{% block body %}
+  <div style="padding-bottom: 20px;">
+    <div class="row">
+      🤖🤖🤖            
+    </div>
+  </div>
+  {% for playlist in playlists %}
+    {% if playlist.description.startswith("🤖") %}
+        <div class="row">
+            <a href="{{ playlist.uri }}"> {{ playlist.description }} </a>         
+        </div>
+    {% endif %} 
+  {% endfor %}
+  <div style="padding-bottom: 20px; padding-top: 20px;">
+    <div class="row">
+      🐢🐢🐢
+    </div>
+  </div>
+  {% for playlist in playlists %}
+    {% if playlist.description.startswith("🐢") %}
+      <div class="row">
+          <a href="{{ playlist.uri }}"> {{ playlist.description }} </a>    
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+

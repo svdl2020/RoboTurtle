@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block script %}
+{% endblock %}
+{% block title %}
+ 🐢 Turtle Mode
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <h2>
+            🐢mode
+        </h2>
+        <h3>
+            Specify your wants below for a turtlemade playlist
+        </h3>
+        <form class="roboturtle" id="turtlemode" name="turtlemode" action="/turtlemode" method="POST">
+            <fieldset>
+                <legend class="legend">User profile</legend>
+                <label for="time_range">How far into your listening history should RoboTurtle dive?</label>
+                <select class="select" id="time_range" name="time_range">
+                    <option value="long_term">Several years</option>
+                    <option value="medium_term">Six months</option>
+                    <option value="short_term">Four weeks</option>
+                </select>
+                <label for="privacy">Playlist privacy setting</label>
+                <select class="select" id="public" name="public">
+                    <option value="true">Public</option>
+                    <option value="false">Private</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend class="legend">Musical metrics</legend>
+                <label class="metric-left" for="popularity">🧐</label>
+                <label class="output-left" for="popularity">Popularity </label>
+                <output class="output" name="popularity_output" id="popularity_output">50</output>
+                <label class="metric-right" for="popularity">⭐</label>
+                <input type="range" min="1" max="100" value="50" class="slider" id="popularity" name="popularity" oninput="popularity_output.value = popularity.value">
+                <label class="metric-left"  for="energy">🐢</label>
+                <label class="output-left" for="energy">Energy </label>
+                <output class="output" name="energy_output" id="energy_output">.5</output>
+                <label class="metric-right"  for="energy">🐰</label>
+                <input type="range" min="0" max="1" value=".5" step=".01" class="slider" id="energy" name="energy" oninput="energy_output.value = energy.value">
+                <label class="metric-left"  for="instrumentalness">👄</label>
+                <label class="output-left" for="instrumentalness">Instrumentalness </label>
+                <output class="output" name="instrumentalness_output" id="instrumentalness_output">.5</output>
+                <label class="metric-right"  for="instrumentalness">🎛️</label>
+                <input type="range" min="0" max="1" value=".5" step=".01" class="slider" id="instrumentalness" name="instrumentalness" oninput="instrumentalness_output.value = instrumentalness.value">
+                <label class="metric-left"  for="acousticness">⚙️</label>
+                <label class="output-left" for="acousticness">Acousticness </label>
+                <output class="output" name="acousticness_output" id="acousticness_output">.5</output>
+                <label class="metric-right"  for="acousticness">🎻</label>
+                <input type="range" min="0" max="1" value="Acousticness .5" step=".01" class="slider" id="acousticness" name="acousticness" oninput="acousticness_output.value = acousticness.value">
+                <label class="metric-left"  for="valence">😢</label>
+                <label class="output-left" for="valence">Valence </Var> </label>
+                <output class="output" name="valence_output" id="valence_output">.5</output>
+                <label class="metric-right"  for="valence">😄</label>
+                <input type="range" min="0" max="1" value="Valence .5" step=".01" class="slider" id="valence" name="valence" oninput="valence_output.value = valence.value" >
+            </fieldset>
+            <button class="button" type="submit" id="button" value="button">
+                 <p>🐢</p>
+                 <p>Take the first step</p>
+                 <p>🐢</p>
+            </button>
+        </form>
+    </div>
+{% endblock %}
